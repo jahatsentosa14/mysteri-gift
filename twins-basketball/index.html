@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Twins Basketball — Mystery Gift</title>
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <div class="wrap">
+
+    <!-- HEADER -->
+    <header class="site-header glass">
+      <div class="brand">
+        <div class="logo-slot">
+  <img src="https://i.imgur.com/lDzos5O.png" alt="Logo Twins Basketball">
+</div>
+        <div class="brand-name js-team-name">Twins Basketball</div>
+      </div>
+
+      <!-- Mini playable basketball: drag ke atas-kiri lalu lepas ke arah ring -->
+      <div class="hoop-mini clay">
+        <div class="hoop-score">Skor: 0</div>
+        <div class="hoop-board"></div>
+        <div class="hoop-rim"></div>
+        <div class="hoop-net"></div>
+        <div class="ball" aria-label="Bola basket, seret untuk melempar"></div>
+        <div class="hoop-hint">seret ↖</div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero glass">
+      <h1>Mystery Gift Hunt <span class="sparkle">✦</span></h1>
+      <p>Isi namamu, catat waktumu, dan menangkan hadiah misteri saat Expo Ekskul! 🎁</p>
+    </section>
+
+    <!-- FORM INPUT NAMA -->
+    <section class="card clay">
+      <h2 class="section-title">📝 Daftar Sekarang</h2>
+      <form id="name-form" class="form-row">
+        <input
+          type="text"
+          id="name-input"
+          placeholder="Tulis nama lengkapmu..."
+          maxlength="60"
+          autocomplete="off"
+          required
+        />
+        <button type="submit" class="clay-btn">Submit Nama</button>
+        <p id="form-msg" class="form-msg"></p>
+        <div id="reminder-box" class="reminder-box">
+          📌 Jangan lupa datang ke <b class="js-team-name">Twins Basketball</b> Expo Ekskul untuk mengambil
+          Mystery Gift-mu kalau namamu terpilih di roulette! Nama yang tidak hadir otomatis hangus.
+        </div>
+      </form>
+    </section>
+
+    <!-- LEADERBOARD TERCEPAT -->
+    <section class="card clay">
+      <h2 class="section-title">⚡ Tercepat Daftar</h2>
+      <ul id="fastest-list" class="leader-list"></ul>
+    </section>
+
+    <!-- COUNTDOWN (sebelum tanggal expo) -->
+    <section id="countdown-wrap" class="card clay">
+      <h2 class="section-title">⏰ Roulette Dimulai Dalam</h2>
+      <div class="countdown-grid">
+        <div class="countdown-cell glass">
+          <span id="cd-d" class="countdown-num">--</span>
+          <span class="countdown-label">Hari</span>
+        </div>
+        <div class="countdown-cell glass">
+          <span id="cd-h" class="countdown-num">--</span>
+          <span class="countdown-label">Jam</span>
+        </div>
+        <div class="countdown-cell glass">
+          <span id="cd-m" class="countdown-num">--</span>
+          <span class="countdown-label">Menit</span>
+        </div>
+        <div class="countdown-cell glass">
+          <span id="cd-s" class="countdown-num">--</span>
+          <span class="countdown-label">Detik</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROULETTE (otomatis muncul saat tanggal expo tiba) -->
+    <section id="roulette-wrap" class="card clay hidden">
+      <h2 class="section-title">🎡 Roulette Mystery Gift</h2>
+      <div class="roulette-wheel-box">
+        <div id="roulette-display" class="roulette-display glass">
+          <span class="name-spin">?</span>
+        </div>
+        <p id="roulette-status" class="roulette-status"></p>
+      </div>
+    </section>
+
+    <!-- LEADERBOARD PEMENANG -->
+    <section class="card clay">
+      <h2 class="section-title">🏆 Pemenang Mystery Gift</h2>
+      <ul id="winner-list" class="leader-list winner-list"></ul>
+    </section>
+
+  </div>
+
+  <footer>
+    Made With <span class="heart">♥</span> by Loonareen Studios
+  </footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/basketball-game.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
